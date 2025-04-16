@@ -1,0 +1,33 @@
+<resources>
+    <string name="title_home">Beranda</string>
+    <string name="title_upcoming">Mendatang</string>
+    <string name="title_favorite">Favorit</string>
+    <string name="title_finished">Selesai</string>
+    <string name="title_settings">Pengaturan</string>
+    <string name="thumbnail_event_image">Gambar Mini Acara</string>
+    <string name="close_button">Tombol Tutup</string>
+    <string name="retry">Coba Lagi</string>
+    <string name="no_internet_connection">Tidak Ada Koneksi Internet</string>
+    <string name="image_cover">Gambar Sampul</string>
+    <string name="visit_webpage">Kunjungi Situs Web</string>
+    <string name="search_something">Cari sesuatu…</string>
+    <string name="upcoming_events">Acara Mendatang</string>
+    <string name="finished_events">Acara Selesai</string>
+    <string name="organized_by">Penyelenggara: %1$s</string>
+    <string name="remaining_quota">Kuota tersisa: %1$s</string>
+    <string name="title_dark_mode">Mode Gelap</string>
+    <string name="title_notification">Notifikasi</string>
+    <string name="summary_notification">Terima pengingat dan pembaruan tentang acara yang akan datang dan favorit Anda</string>
+    <string name="summary_dark_mode">Beralih ke tema gelap untuk mengurangi ketegangan mata dan menghemat baterai</string>
+    <string name="notification_channel_name">Saluran Acara</string>
+    <string name="notification_title">Acara Baru: %1$s</string>
+    <string name="notification_description">%1$s.</string>
+    <string name="error_fetching_event">Gagal mengambil acara terbaru: %1$s</string>
+    <string name="notifications_permission_granted">Izin notifikasi diberikan</string>
+    <string name="notifications_permission_rejected">Izin notifikasi ditolak</string>
+    <string name="registration_closed">Registrasi Ditutup</string>
+    <string name="app_version">Versi Aplikasi</string>
+    <string name="oss_licenses">Lisensi Sumber Terbuka</string>
+    <string name="oss_licenses_summary">Lihat lisensi dari pustaka sumber terbuka yang digunakan pada aplikasi ini</string>
+    <string name="unknown_version">Versi Tidak Diketahui</string>
+</resources>

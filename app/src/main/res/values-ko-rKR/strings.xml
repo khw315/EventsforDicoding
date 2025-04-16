@@ -1,0 +1,33 @@
+<resources>
+    <string name="title_home">홈</string>
+    <string name="title_upcoming">예정된</string>
+    <string name="title_favorite">즐겨찾기</string>
+    <string name="title_finished">종료됨</string>
+    <string name="title_settings">설정</string>
+    <string name="thumbnail_event_image">이벤트 썸네일 이미지</string>
+    <string name="close_button">닫기 버튼</string>
+    <string name="retry">다시 시도</string>
+    <string name="no_internet_connection">인터넷 연결 없음</string>
+    <string name="image_cover">커버 이미지</string>
+    <string name="visit_webpage">웹페이지 방문</string>
+    <string name="search_something">무언가 검색하기…</string>
+    <string name="upcoming_events">예정된 이벤트</string>
+    <string name="finished_events">종료된 이벤트</string>
+    <string name="organized_by">주최자: %1$s</string>
+    <string name="remaining_quota">남은 인원: %1$s명</string>
+    <string name="title_dark_mode">다크 모드</string>
+    <string name="title_notification">알림</string>
+    <string name="summary_notification">다가오는 이벤트와 즐겨찾는 이벤트에 대한 알림과 업데이트를 받아보세요</string>
+    <string name="summary_dark_mode">눈의 피로를 줄이고 배터리를 절약하려면 다크 테마로 전환하세요</string>
+    <string name="notification_channel_name">이벤트 채널</string>
+    <string name="notification_title">새 이벤트: %1$s</string>
+    <string name="notification_description">%1$s.</string>
+    <string name="error_fetching_event">최신 이벤트를 가져오는 중 오류 발생: %1$s</string>
+    <string name="notifications_permission_granted">알림 권한이 승인되었습니다</string>
+    <string name="notifications_permission_rejected">알림 권한이 거부되었습니다</string>
+    <string name="registration_closed">정원 마감</string>
+    <string name="app_version">앱 버전</string>
+    <string name="oss_licenses">오픈소스 라이선스</string>
+    <string name="oss_licenses_summary">이 앱에서 사용된 오픈소스 라이브러리의 라이선스를 확인하세요</string>
+    <string name="unknown_version">알 수 없는 버전</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:iconSpaceReserved="false">
+
+    <Preference
+        android:layout="@layout/appbar_settings"
+        android:selectable="false"
+        android:title="@string/title_settings" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:icon="@drawable/ic_dark_mode"
+        android:key="theme"
+        android:summary="@string/summary_dark_mode"
+        android:title="@string/title_dark_mode" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:icon="@drawable/ic_notifications"
+        android:key="notification"
+        android:summary="@string/summary_notification"
+        android:title="@string/title_notification" />
+
+    // OSS Licenses Section
+    <Preference
+        android:key="oss_licenses"
+        android:title="@string/oss_licenses"
+        android:summary="@string/oss_licenses_summary" />
+
+    <Preference
+        android:key="app_version"
+        android:title="@string/app_version"
+        android:summary=""
+        android:selectable="false" />
+
+</PreferenceScreen>
