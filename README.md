@@ -34,7 +34,7 @@ To run this project locally:
 
 1. Clone the repository:
    Open a terminal and run the following command to clone the repository:
-    ```git clone https://github.com/khw15/EventsforDicoding.git```
+    ```git clone https://github.com/khw315/EventsforDicoding.git```
 
 2. Open the project in Android Studio:
     - Open Android Studio.
