@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import khw15.eventsdicoding.data.local.entity.EventEntity
 
-@Database(entities = [EventEntity::class], version = 3, exportSchema = false)
+@Database(entities = [EventEntity::class], version = 4, exportSchema = false)
 abstract class EventDatabase : RoomDatabase() {
 
     abstract fun eventDao(): EventDao
