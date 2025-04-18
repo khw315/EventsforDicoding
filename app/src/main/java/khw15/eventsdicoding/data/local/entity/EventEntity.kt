@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-@Entity(tableName = "EventForDicoding")
+@Entity(tableName = "Events_For_Dicoding")
 data class EventEntity(
     @PrimaryKey val id: Int?,
     val name: String?,

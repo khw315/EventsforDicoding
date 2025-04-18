@@ -10,6 +10,7 @@ import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.util.Log
+import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationCompat.BigPictureStyle
 import androidx.core.net.toUri
@@ -18,6 +19,7 @@ import androidx.work.WorkerParameters
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
+import khw15.eventsdicoding.BuildConfig
 import khw15.eventsdicoding.R
 import khw15.eventsdicoding.data.remote.EventRepository
 import khw15.eventsdicoding.di.Injection
@@ -59,7 +61,15 @@ class NotificationsWorker(
 
         Result.success()
     } catch (e: Exception) {
-        Log.e(TAG, applicationContext.getString(R.string.error_fetching_event, e.message))
+        if (BuildConfig.DEBUG) {
+            Log.e(TAG, "Error fetching event: ${e.message}", e)
+        } else {
+            Toast.makeText(
+                applicationContext,
+                applicationContext.getString(R.string.error_fetching_event),
+                Toast.LENGTH_SHORT
+            ).show()
+        }
         Result.failure()
     }
 

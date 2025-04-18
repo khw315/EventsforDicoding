@@ -13,19 +13,19 @@ interface EventDao {
 
     // --- Query All Events by Type ---
 
-    @Query("SELECT * FROM EventForDicoding WHERE isUpcoming = 1 ORDER BY beginTime ASC")
+    @Query("SELECT * FROM Events_For_Dicoding WHERE isUpcoming = 1 ORDER BY beginTime ASC")
     fun getUpcomingEvents(): LiveData<List<EventEntity>>
 
-    @Query("SELECT * FROM EventForDicoding WHERE isFinished = 1 ORDER BY endTime DESC")
+    @Query("SELECT * FROM Events_For_Dicoding WHERE isFinished = 1 ORDER BY endTime DESC")
     fun getFinishedEvents(): LiveData<List<EventEntity>>
 
-    @Query("SELECT * FROM EventForDicoding WHERE isFavorite = 1 ORDER BY name ASC")
+    @Query("SELECT * FROM Events_For_Dicoding WHERE isFavorite = 1 ORDER BY name DESC")
     fun getFavoriteEvents(): LiveData<List<EventEntity>>
 
     // --- Search Events by Type ---
 
     @Query("""
-        SELECT * FROM EventForDicoding 
+        SELECT * FROM Events_For_Dicoding 
         WHERE isUpcoming = 1 AND (
             name LIKE '%' || :query || '%' OR 
             summary LIKE '%' || :query || '%' OR 
@@ -37,7 +37,7 @@ interface EventDao {
     fun searchUpcomingEvents(query: String): LiveData<List<EventEntity>>
 
     @Query("""
-        SELECT * FROM EventForDicoding 
+        SELECT * FROM Events_For_Dicoding 
         WHERE isFinished = 1 AND (
             name LIKE '%' || :query || '%' OR 
             summary LIKE '%' || :query || '%' OR 
@@ -49,7 +49,7 @@ interface EventDao {
     fun searchFinishedEvents(query: String): LiveData<List<EventEntity>>
 
     @Query("""
-        SELECT * FROM EventForDicoding 
+        SELECT * FROM Events_For_Dicoding 
         WHERE isFavorite = 1 AND (
             name LIKE '%' || :query || '%' OR 
             summary LIKE '%' || :query || '%' OR 
@@ -68,11 +68,11 @@ interface EventDao {
     @Update
     suspend fun updateEvent(event: EventEntity)
 
-    @Query("DELETE FROM EventForDicoding WHERE isFavorite = 0")
+    @Query("DELETE FROM Events_For_Dicoding WHERE isFavorite = 0")
     suspend fun deleteAll()
 
     // --- Favorite State Check ---
 
-    @Query("SELECT EXISTS(SELECT 1 FROM EventForDicoding WHERE name = :name AND isFavorite = 1)")
+    @Query("SELECT EXISTS(SELECT 1 FROM Events_For_Dicoding WHERE name = :name AND isFavorite = 1)")
     suspend fun isEventFavorite(name: String): Boolean
 }

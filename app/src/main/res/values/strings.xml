@@ -8,7 +8,7 @@
     <string name="thumbnail_event_image">Thumbnail Event Image</string>
     <string name="close_button">Close Button</string>
     <string name="retry">Retry</string>
-    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="no_internet_connection">No internet connection</string>
     <string name="image_cover">Image Cover</string>
     <string name="visit_webpage">Visit Webpage</string>
     <string name="search_something">Search for something…</string>
@@ -25,7 +25,7 @@
 
     <string name="notification_channel_name">Event Channel</string>
     <string name="notification_title">New Event: %1$s</string>
-    <string name="notification_description">%1$s.</string>
+    <string name="notification_description" translatable="false">%1$s.</string>
 
     <string name="error_fetching_event">Error fetching the latest event: %1$s</string>
 
@@ -41,4 +41,5 @@
     <string name="oss_licenses_summary">View the licenses of the open source libraries used in this app</string>
 
     <string name="unknown_version">Unknown Version</string>
+    <string name="error_formatting_date">A date formatting error has occurred</string>
 </resources>

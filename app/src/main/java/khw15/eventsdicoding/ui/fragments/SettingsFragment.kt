@@ -15,6 +15,7 @@ import androidx.work.NetworkType
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.workDataOf
+import khw15.eventsdicoding.BuildConfig
 import khw15.eventsdicoding.R
 import khw15.eventsdicoding.ui.LicenseActivity
 import khw15.eventsdicoding.ui.NotificationsWorker
@@ -48,7 +49,9 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 requireContext().packageManager
                     .getPackageInfo(requireContext().packageName, 0).versionName
             } catch (e: Exception) {
-                Log.e("SettingsFragment", "Error getting app version", e)
+                if (BuildConfig.DEBUG) {
+                    Log.e("SettingsFragment", "Error getting app version", e)
+                }
                 getString(R.string.unknown_version)
             }
         }

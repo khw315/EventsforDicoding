@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.net.toUri
 import com.bumptech.glide.Glide
+import khw15.eventsdicoding.BuildConfig
 import khw15.eventsdicoding.R
 import khw15.eventsdicoding.data.local.entity.EventEntity
 import khw15.eventsdicoding.databinding.ActivityDetailBinding
@@ -71,9 +72,13 @@ class DetailActivity : AppCompatActivity() {
 
             outputFormat.format(date)
         } catch (e: Exception) {
-            Log.e("DateFormatError", "Error formatting date", e)
-            Toast.makeText(this, "${e.printStackTrace()}", Toast.LENGTH_SHORT).show()
-            null
+            if (BuildConfig.DEBUG) {
+                Log.e("DateFormatError", "Error formatting date", e)
+                Toast.makeText(this, "${e.message}", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, getString(R.string.error_formatting_date), Toast.LENGTH_SHORT).show()
+            }
+            return null
         }
     }
 
