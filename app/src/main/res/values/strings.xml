@@ -42,4 +42,7 @@
 
     <string name="unknown_version">Unknown Version</string>
     <string name="error_formatting_date">A date formatting error has occurred</string>
+
+    <string name="developer_info">Developer Info</string>
+    <string name="developer_info_summary">This app is developed with love on Earth by KHW315</string>
 </resources>

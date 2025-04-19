@@ -41,10 +41,11 @@ android {
         minSdk = 26
         targetSdk = 35
         versionCode = 24
-        versionName = "2.8.2"
+        versionName = "2.2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "BASE_URL", "\"https://event-api.dicoding.dev/\"")
+        buildConfigField("String", "GITHUB_URL", "\"https://github.com/khw315/EventsforDicoding\"")
     }
 
     buildTypes {

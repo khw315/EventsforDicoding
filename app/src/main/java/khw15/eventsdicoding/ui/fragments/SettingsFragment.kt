@@ -1,10 +1,12 @@
 package khw15.eventsdicoding.ui.fragments
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.browser.customtabs.CustomTabsIntent
 import androidx.fragment.app.viewModels
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
@@ -23,6 +25,7 @@ import khw15.eventsdicoding.ui.viewmodels.MainViewModel
 import khw15.eventsdicoding.ui.viewmodels.ViewModelFactory
 import khw15.eventsdicoding.utils.SettingsKeys
 import java.util.concurrent.TimeUnit
+import androidx.core.net.toUri
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
@@ -78,6 +81,17 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         findPreference<Preference>(SettingsKeys.OSS_LICENSE)?.setOnPreferenceClickListener {
             startActivity(Intent(requireContext(), LicenseActivity::class.java))
+            true
+        }
+
+        findPreference<Preference>(SettingsKeys.DEV_INFO)?.setOnPreferenceClickListener {
+            val url = BuildConfig.GITHUB_URL
+
+            val githubTabsIntent = CustomTabsIntent.Builder()
+                .setShowTitle(true)
+                .build()
+
+            githubTabsIntent.launchUrl(requireContext(), url.toUri())
             true
         }
     }

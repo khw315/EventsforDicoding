@@ -30,4 +30,6 @@
     <string name="oss_licenses_summary">Lihat lisensi dari pustaka sumber terbuka yang digunakan pada aplikasi ini</string>
     <string name="unknown_version">Versi Tidak Diketahui</string>
     <string name="error_formatting_date">Terjadi kesalahan dalam memformat tanggal</string>
+    <string name="developer_info">Info Pengembang</string>
+    <string name="developer_info_summary">Aplikasi ini dikembangkan dengan penuh cinta di Bumi oleh KHW315</string>
 </resources>

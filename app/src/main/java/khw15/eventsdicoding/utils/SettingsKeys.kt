@@ -5,5 +5,6 @@ object SettingsKeys {
     const val THEME = "theme"
     const val NOTIFICATION = "notification"
     const val OSS_LICENSE = "oss_licenses"
+    const val DEV_INFO = "developer_info"
     const val NOTIFICATION_WORK_NAME = "notification"
 }
