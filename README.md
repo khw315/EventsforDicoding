@@ -18,7 +18,7 @@ An Android application built with Kotlin for managing and viewing event details.
 - **Data Binding**: LiveData, ViewModel
 - **Networking**: Retrofit, Coroutines, Dicoding Event API
 - **Local Storage**: Room Database
-- **UI**: RecyclerView, Material Components, View Binding
+- **UI Components**: RecyclerView, Material Components, View Binding
 - **Other**: AndroidX, Navigation Component, Dark Mode, SharedPreferences
 
 ### Prerequisites
