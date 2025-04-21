@@ -69,6 +69,6 @@ Once the app is up and running, you can:
 - **Customize Settings**: Enable dark mode and manage notification preferences from the settings page.
 - **Offline Handling**: The app detects when the device is offline and notifies the user accordingly.
 
-## 📝 License
+## License
 
 This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for more details.
