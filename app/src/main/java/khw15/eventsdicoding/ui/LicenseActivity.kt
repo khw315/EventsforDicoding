@@ -18,6 +18,11 @@ class LicenseActivity : AppCompatActivity() {
             .withAboutVersionShownCode(true)
             .withAboutAppName(getString(R.string.app_name))
             .withSearchEnabled(true)
+            .withLicenseDialog(true)
+            .withShowLoadingProgress(true)
+            .withSortEnabled(true)
+            .withEdgeToEdge(true)
+            .withVersionShown(true)
             .start(this)
         finish()
     }
