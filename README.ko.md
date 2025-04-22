@@ -77,7 +77,7 @@ Kotlin으로 제작된 Android 애플리케이션으로, 이벤트 세부 정보
 
 ## 연락처
 
-이 프로젝트에 대한 질문이나 피드백이 있으시면 [이메일](mailto:contact@alfaisal.my.id)로 연락하시거나 [LinkedIn](https://www.linkedin.com/in/fafr/)에서 저와 연결해 주세요.
+이 프로젝트에 대한 질문이나 피드백이 있으시면 [이메일](mailto:contact@alfaisal.my.id)로 연락하시거나 [링크드인](https://www.linkedin.com/in/fafr/)에서 저와 연결해 주세요.
 
 ## 감사의 말
 
@@ -95,7 +95,7 @@ Kotlin으로 제작된 Android 애플리케이션으로, 이벤트 세부 정보
 - [Kotlin](https://kotlinlang.org/) 프로그래밍 언어.
 - [Lottie](https://airbnb.io/lottie/#/) 애니메이션.
 - [Material Components](https://material.io/develop/android/components) UI 구성요소.
-- [Material Design](https://material.io/) 디자인 가이드라인.
+- [Material Design](https://material.io/) 가이드라인.
 - [Navigation Component](https://developer.android.com/guide/navigation) 내비게이션.
 - [Retrofit](https://square.github.io/retrofit/) 네트워킹 라이브러리.
 - [Room](https://developer.android.com/training/data-storage/room) 데이터베이스.
