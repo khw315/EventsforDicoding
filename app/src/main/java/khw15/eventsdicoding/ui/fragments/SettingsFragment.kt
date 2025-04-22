@@ -1,12 +1,13 @@
 package khw15.eventsdicoding.ui.fragments
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.browser.customtabs.CustomTabsIntent
+import androidx.core.app.NotificationCompat
+import androidx.core.net.toUri
 import androidx.fragment.app.viewModels
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
@@ -24,10 +25,9 @@ import khw15.eventsdicoding.ui.NotificationsWorker
 import khw15.eventsdicoding.ui.viewmodels.MainViewModel
 import khw15.eventsdicoding.ui.viewmodels.ViewModelFactory
 import khw15.eventsdicoding.utils.SettingsKeys
-import java.util.concurrent.TimeUnit
-import androidx.core.net.toUri
 import java.time.Duration
 import java.time.LocalDateTime
+import java.util.concurrent.TimeUnit
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
@@ -176,11 +176,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
         notificationManager.createNotificationChannel(channel)
 
-        val notification = androidx.core.app.NotificationCompat.Builder(requireContext(), channelId)
+        val notification = NotificationCompat.Builder(requireContext(), channelId)
             .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle(getString(R.string.reminder_activated))
             .setContentText(getString(R.string.daily_reminder_on))
-            .setPriority(androidx.core.app.NotificationCompat.PRIORITY_DEFAULT)
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setDefaults(NotificationCompat.DEFAULT_ALL)
+            .setBadgeIconType(NotificationCompat.BADGE_ICON_SMALL)
             .build()
 
         notificationManager.notify(1001, notification)
