@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                         networkDialog?.dismissDialog()
                         dataRefreshListener?.onNetworkChanged()
                     } else {
-                        Toast.makeText(this@MainActivity, getString(R.string.no_internet_connection), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@MainActivity, getString(R.string.offline_state), Toast.LENGTH_SHORT).show()
                     }
                 }
             }

@@ -1,6 +1,5 @@
 package khw15.eventsdicoding.ui
 
-import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -8,7 +7,6 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
-import android.os.Build
 import android.util.Log
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
@@ -92,7 +90,6 @@ class NotificationsWorker(
             .asBitmap()
             .load(imageUrl)
             .into(object : CustomTarget<Bitmap>() {
-                @SuppressLint("ObsoleteSdkInt")
                 override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
                     val builder = NotificationCompat.Builder(applicationContext, CHANNEL_ID)
                         .setSmallIcon(R.drawable.ic_notification)
@@ -105,14 +102,12 @@ class NotificationsWorker(
                         .setDefaults(NotificationCompat.DEFAULT_ALL)
                         .setBadgeIconType(NotificationCompat.BADGE_ICON_SMALL)
 
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        val channel = NotificationChannel(
-                            CHANNEL_ID,
-                            applicationContext.getString(R.string.notification_channel_name),
-                            NotificationManager.IMPORTANCE_HIGH
-                        )
-                        notificationManager.createNotificationChannel(channel)
-                    }
+                    val channel = NotificationChannel(
+                        CHANNEL_ID,
+                        applicationContext.getString(R.string.notification_channel_name),
+                        NotificationManager.IMPORTANCE_HIGH
+                    )
+                    notificationManager.createNotificationChannel(channel)
 
                     notificationManager.notify(NOTIFICATION_ID, builder.build())
                 }

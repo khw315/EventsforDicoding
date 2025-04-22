@@ -1,54 +1,62 @@
 <resources>
+    <!-- App Info -->
     <string name="app_name" translatable="false">Events for Dicoding</string>
+    <string name="app_version">App Version</string>
+    <string name="unknown_version">Unknown Version</string>
+
+    <!-- Navigation Titles -->
     <string name="title_home">Home</string>
     <string name="title_upcoming">Upcoming</string>
     <string name="title_favorite">Favorite</string>
     <string name="title_finished">Finished</string>
     <string name="title_settings">Settings</string>
+
+    <!-- Event Details -->
     <string name="thumbnail_event_image">Thumbnail Event Image</string>
-    <string name="close_button">Close Button</string>
-    <string name="retry">Retry</string>
-    <string name="no_internet_connection">No internet connection</string>
     <string name="image_cover">Image Cover</string>
     <string name="visit_webpage">Visit Webpage</string>
-    <string name="search_something">Search for something…</string>
-    <string name="upcoming_events">Upcoming Events</string>
-    <string name="finished_events">Finished Events</string>
     <string name="organized_by">Organized by: %1$s</string>
     <string name="remaining_quota">Remaining quota: %1$s</string>
+    <string name="registration_closed">Registration Closed</string>
 
+    <!-- Search -->
+    <string name="search_something">Search for something…</string>
+
+    <!-- Event Lists -->
+    <string name="upcoming_events">Upcoming Events</string>
+    <string name="finished_events">Finished Events</string>
+
+    <!-- Settings -->
     <string name="title_dark_mode">Dark Mode</string>
     <string name="title_notification">Notification</string>
-
     <string name="summary_notification">Receive reminders and updates about your upcoming and favorite events</string>
     <string name="summary_dark_mode">Switch to a darker theme to reduce eye strain and save battery</string>
 
+    <!-- Notification -->
     <string name="notification_channel_name">Event Channel</string>
-    <string name="notification_title">New Event: %1$s</string>
-    <string name="notification_description" translatable="false">%1$s.</string>
-
-    <string name="error_fetching_event">Error fetching the latest event: %1$s</string>
-
-    <string name="notifications_permission_granted">Notifications permission granted</string>
-    <string name="notifications_permission_rejected">Notifications permission rejected</string>
-
-    <string name="notifications_test" translatable="false">Test Notification</string>
-
-    <string name="registration_closed">Registration Closed</string>
-    <string name="app_version">App Version</string>
-
-    <string name="oss_licenses">Open Source Licenses</string>
-    <string name="oss_licenses_summary">View the licenses of the open source libraries used in this app</string>
-
-    <string name="unknown_version">Unknown Version</string>
-    <string name="error_formatting_date">A date formatting error has occurred</string>
-
-    <string name="developer_info">Developer Info</string>
-    <string name="developer_info_summary">This app is developed with love on Earth by KHW315</string>
-
     <string name="notifications_channel_name">Daily Reminders</string>
     <string name="notifications_channel_description">Notifications about daily event reminders</string>
-
+    <string name="notification_title">New Event: %1$s</string>
+    <string name="notification_description" translatable="false">%1$s.</string>
+    <string name="notifications_permission_granted">Notifications permission granted</string>
+    <string name="notifications_permission_rejected">Notifications permission rejected</string>
+    <string name="notifications_test" translatable="false">Test Notification</string>
     <string name="reminder_activated">Notification Activated</string>
     <string name="daily_reminder_on">Daily notification is now ON. You’ll get notifications at 12:00 PM!</string>
+
+    <!-- Buttons -->
+    <string name="close_button">Close Button</string>
+    <string name="retry">Retry</string>
+
+    <!-- Error and Offline States -->
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="offline_state">Your device is offline.</string>
+    <string name="error_fetching_event">Error fetching the latest event: %1$s</string>
+    <string name="error_formatting_date">A date formatting error has occurred</string>
+
+    <!-- About / Developer -->
+    <string name="developer_info">Developer Info</string>
+    <string name="developer_info_summary">This app is developed with love on Earth by KHW315</string>
+    <string name="oss_licenses">Open Source Licenses</string>
+    <string name="oss_licenses_summary">View the licenses of the open source libraries used in this app</string>
 </resources>

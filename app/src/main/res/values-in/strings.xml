@@ -36,4 +36,5 @@
     <string name="notifications_channel_description">Notifikasi tentang pengingat acara harian</string>
     <string name="reminder_activated">Notifikasi Diaktifkan</string>
     <string name="daily_reminder_on">Notifikasi harian sekarang AKTIF. Anda akan menerima notifikasi pada pukul 12:00 siang!</string>
+    <string name="offline_state">Perangkat Anda sedang offline.</string>
 </resources>
