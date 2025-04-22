@@ -21,7 +21,7 @@ Kotlin으로 제작된 Android 애플리케이션으로, 이벤트 세부 정보
 - **UI 구성요소**: RecyclerView, Material Components, View Binding
 - **기타**: AndroidX, Navigation Component, Dark Mode, SharedPreferences
 
-### 사전 준비사항
+## 사전 준비사항
 
 프로젝트를 시작하기 전에 다음 소프트웨어가 설치되어 있어야 합니다:
 
