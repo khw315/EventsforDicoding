@@ -1,4 +1,4 @@
-# EventsforDicoding
+# Events for Dicoding
 
 Kotlin으로 제작된 Android 애플리케이션으로, 이벤트 세부 정보를 관리하고 조회할 수 있습니다. Dicoding의 [Belajar Fundamental Aplikasi Android](https://www.dicoding.com/academies/14-belajar-fundamental-aplikasi-android) 과정과 [Android Developer](https://www.dicoding.com/learningpaths/7) 학습 경로의 일환으로 개발된 이 프로젝트는 현대 Android 개발 관행을 MVVM 아키텍처를 통해 구현한 사례를 보여줍니다. 사용자는 이벤트를 즐겨찾기로 표시하고, 라이트/다크 모드를 전환하며, 알림 환경설정을 커스터마이즈할 수 있습니다. 퍼포먼스, 모범 사례 준수, 직관적인 사용자 경험, 다국어 지원을 중점으로 정성껏 제작되었습니다.
 
