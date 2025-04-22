@@ -1,4 +1,4 @@
-# EventsforDicoding
+# Events for Dicoding
 
 An Android application built with Kotlin for managing and viewing event details. Developed as part of Dicoding's [Belajar Fundamental Aplikasi Android](https://www.dicoding.com/academies/14-belajar-fundamental-aplikasi-android) course in the [Android Developer](https://www.dicoding.com/learningpaths/7) learning path, this project showcases the implementation of modern Android development practices using the MVVM architecture. The app allows users to mark events as favorites, switch between light and dark modes, and customize notification preferences. It is carefully crafted with a focus on performance, adherence to best practices, an intuitive user experience, and support for multiple languages.
 
