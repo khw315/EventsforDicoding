@@ -32,4 +32,8 @@
     <string name="error_formatting_date">Terjadi kesalahan dalam memformat tanggal</string>
     <string name="developer_info">Info Pengembang</string>
     <string name="developer_info_summary">Aplikasi ini dikembangkan dengan penuh cinta di Bumi oleh KHW315</string>
+    <string name="notifications_channel_name">Pengingat Harian</string>
+    <string name="notifications_channel_description">Notifikasi tentang pengingat acara harian</string>
+    <string name="reminder_activated">Notifikasi Diaktifkan</string>
+    <string name="daily_reminder_on">Notifikasi harian sekarang AKTIF. Anda akan menerima notifikasi pada pukul 12:00 siang!</string>
 </resources>

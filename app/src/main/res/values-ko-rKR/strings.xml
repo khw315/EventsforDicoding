@@ -32,4 +32,8 @@
     <string name="error_formatting_date">날짜 형식 지정 오류가 발생했습니다</string>
     <string name="developer_info">개발자 정보</string>
     <string name="developer_info_summary">KHW315가 사랑으로 지구에서 만든 앱</string>
+    <string name="notifications_channel_name">일일 알림</string>
+    <string name="notifications_channel_description">일일 이벤트 알림에 대한 알림</string>
+    <string name="reminder_activated">알림이 활성화되었습니다</string>
+    <string name="daily_reminder_on">일일 알림이 이제 켜졌습니다. 오후 12시에 알림을 받게 됩니다!</string>
 </resources>

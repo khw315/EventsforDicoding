@@ -26,6 +26,8 @@ import khw15.eventsdicoding.ui.viewmodels.ViewModelFactory
 import khw15.eventsdicoding.utils.SettingsKeys
 import java.util.concurrent.TimeUnit
 import androidx.core.net.toUri
+import java.time.Duration
+import java.time.LocalDateTime
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
@@ -118,6 +120,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
     private fun applyDailyReminder(isEnabled: Boolean) {
         if (isEnabled) {
             startPeriodicNotificationWork()
+            sendMockNotification()
         } else {
             workManager.cancelUniqueWork(SettingsKeys.NOTIFICATION_WORK_NAME)
         }
@@ -132,7 +135,14 @@ class SettingsFragment : PreferenceFragmentCompat() {
             .setRequiredNetworkType(NetworkType.CONNECTED)
             .build()
 
+        // Calculate the initial delay
+        val now = LocalDateTime.now()
+        val nextNoon = now.withHour(12).withMinute(0).withSecond(0).withNano(0)
+            .let { if (it.isBefore(now)) it.plusDays(1) else it }
+        val delayDuration = Duration.between(now, nextNoon).toMillis()
+
         val request = PeriodicWorkRequestBuilder<NotificationsWorker>(24, TimeUnit.HOURS)
+            .setInitialDelay(delayDuration, TimeUnit.MILLISECONDS)
             .setInputData(data)
             .setConstraints(constraints)
             .build()
@@ -147,7 +157,32 @@ class SettingsFragment : PreferenceFragmentCompat() {
             .observe(requireActivity()) { workInfos ->
                 workInfos.forEach {
                     Log.d("SettingsFragment", "Work state: ${it.state}")
+                    Log.d("SettingsFragment", "Delay millis: $delayDuration")
                 }
             }
+    }
+
+    private fun sendMockNotification() {
+        val notificationManager = requireContext().getSystemService(android.app.NotificationManager::class.java)
+
+        val channelId = "daily_reminder_channel"
+
+        val channel = android.app.NotificationChannel(
+            channelId,
+            getString(R.string.notifications_channel_name),
+            android.app.NotificationManager.IMPORTANCE_DEFAULT
+        ).apply {
+            description = getString(R.string.notifications_channel_description)
+        }
+        notificationManager.createNotificationChannel(channel)
+
+        val notification = androidx.core.app.NotificationCompat.Builder(requireContext(), channelId)
+            .setSmallIcon(R.drawable.ic_notification)
+            .setContentTitle(getString(R.string.reminder_activated))
+            .setContentText(getString(R.string.daily_reminder_on))
+            .setPriority(androidx.core.app.NotificationCompat.PRIORITY_DEFAULT)
+            .build()
+
+        notificationManager.notify(1001, notification)
     }
 }
