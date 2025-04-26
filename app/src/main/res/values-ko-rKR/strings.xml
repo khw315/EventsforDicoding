@@ -10,7 +10,7 @@
     <string name="no_internet_connection">인터넷에 연결되어 있지 않습니다</string>
     <string name="image_cover">커버 이미지</string>
     <string name="visit_webpage">웹페이지 열기</string>
-    <string name="search_something">검색어를 입력하세요…</string>
+    <string name="search_something">이벤트 검색…</string>
     <string name="upcoming_events">예정된 이벤트</string>
     <string name="finished_events">종료된 이벤트</string>
     <string name="organized_by">주최자: %1$s</string>
@@ -37,4 +37,6 @@
     <string name="reminder_activated">알림이 활성화되었습니다</string>
     <string name="daily_reminder_on">알림이 이제 켜졌습니다. 오후 12시에 알림을 받게 됩니다!</string>
     <string name="offline_state">오프라인 상태입니다</string>
+    <string name="category_seminar">세미나</string>
+    <string name="category_tech_talk">테크토크</string>
 </resources>

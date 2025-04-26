@@ -20,7 +20,7 @@
     <string name="registration_closed">Registration Closed</string>
 
     <!-- Search -->
-    <string name="search_something">Search for something…</string>
+    <string name="search_something">Search event…</string>
 
     <!-- Event Lists -->
     <string name="upcoming_events">Upcoming Events</string>
@@ -59,4 +59,8 @@
     <string name="developer_info_summary">This app is developed with love on Earth by KHW315</string>
     <string name="oss_licenses">Open Source Licenses</string>
     <string name="oss_licenses_summary">View the licenses of the open source libraries used in this app</string>
+
+    <!-- Categories -->
+    <string name="category_seminar">Seminar</string>
+    <string name="category_tech_talk">Tech-talk</string>
 </resources>

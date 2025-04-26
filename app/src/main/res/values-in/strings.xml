@@ -10,7 +10,7 @@
     <string name="no_internet_connection">Tidak ada koneksi internet</string>
     <string name="image_cover">Gambar Sampul</string>
     <string name="visit_webpage">Kunjungi Situs Web</string>
-    <string name="search_something">Cari sesuatu…</string>
+    <string name="search_something">Cari acara…</string>
     <string name="upcoming_events">Acara Mendatang</string>
     <string name="finished_events">Acara Selesai</string>
     <string name="organized_by">Penyelenggara: %1$s</string>
@@ -37,4 +37,6 @@
     <string name="reminder_activated">Notifikasi Diaktifkan</string>
     <string name="daily_reminder_on">Notifikasi harian sekarang AKTIF. Anda akan menerima notifikasi pada pukul 12:00 siang!</string>
     <string name="offline_state">Perangkat Anda sedang offline.</string>
+    <string name="category_seminar">Seminar</string>
+    <string name="category_tech_talk">Tech-talk</string>
 </resources>

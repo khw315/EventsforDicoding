@@ -53,15 +53,24 @@ class VerticalAdapter(
         fun bind(event: EventEntity) {
             binding.titleTextView.text = event.name
             binding.ownerTextView.text = event.ownerName
-            binding.chip.text = event.category
-            Glide.with(binding.root.context)
+
+            val context = binding.root.context
+            val localizedCategory = when (event.category?.lowercase()) {
+                "seminar" -> context.getString(R.string.category_seminar)
+                "tech-talk" -> context.getString(R.string.category_tech_talk)
+                else -> event.category // fallback
+            }
+            binding.chip.text = localizedCategory
+
+            Glide.with(context)
                 .load(event.imageLogo)
                 .transform(RoundedCorners(16))
                 .into(binding.imageView)
+
             itemView.setOnClickListener {
-                val intent = Intent(binding.root.context, DetailActivity::class.java)
+                val intent = Intent(context, DetailActivity::class.java)
                 intent.putExtra(DetailActivity.EXTRA_EVENT, event)
-                binding.root.context.startActivity(intent)
+                context.startActivity(intent)
             }
         }
     }
