@@ -102,4 +102,4 @@ This project was made possible with the help of various resources and tools. Spe
 - [Shimmer](https://github.com/facebookarchive/shimmer-android) for loading animations.
 - And many more!
 
-한국어 버전은 [README.ko.md](README.ko.md) 파일에서 확인하새요요.
+한국어 버전은 [README.ko.md](README.ko.md) 파일에서 확인하새요.
