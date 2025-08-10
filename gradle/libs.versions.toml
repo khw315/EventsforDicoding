@@ -33,6 +33,9 @@ lifecycleViewmodelKtx = "2.6.2"
 #noinspection GradleDependency
 roomKtx = "2.5.2"
 workRuntime = "2.10.0"
+testCore = "1.6.1"
+coreTesting = "2.2.0"
+robolectric = "4.13"
 
 [libraries]
 aboutlibraries = { module = "com.mikepenz:aboutlibraries", version.ref = "aboutlibraries" }
@@ -65,6 +68,9 @@ androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "
 androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx" }
+androidx-test-core = { module = "androidx.test:core", version.ref = "testCore" }
+androidx-arch-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
