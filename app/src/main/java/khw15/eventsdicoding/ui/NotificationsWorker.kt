@@ -32,7 +32,7 @@ class NotificationsWorker(
 
     companion object {
         private val TAG = NotificationsWorker::class.java.simpleName
-        const val EXTRA_EVENT = "EventForDicoding"
+        const val EXTRA_EVENT = "EventsForDicoding"
         const val NOTIFICATION_ID = 25
         const val CHANNEL_ID = "25152515"
     }
