@@ -20,28 +20,34 @@ class EventRepository(
 
         try {
             val response = apiService.getEvents(active = active)
-            val eventList = response.listEvents?.map { event ->
-                val isFavorite = event.name?.let { eventDao.isEventFavorite(it) }
-                EventEntity(
-                    id = event.id,
-                    name = event.name,
-                    summary = event.summary,
-                    description = event.description,
-                    imageLogo = event.imageLogo,
-                    mediaCover = event.mediaCover,
-                    category = event.category,
-                    ownerName = event.ownerName,
-                    cityName = event.cityName,
-                    quota = event.quota,
-                    registrants = event.registrants,
-                    beginTime = event.beginTime,
-                    endTime = event.endTime,
-                    link = event.link,
-                    isFavorite = isFavorite,
-                    isUpcoming = active == 1,
-                    isFinished = active == 0,
-                )
+            val eventList = mutableListOf<EventEntity>()
+
+            response.listEvents?.let { events ->
+                for (event in events) {
+                    val isFavorite = event.name?.let { eventDao.isEventFavorite(it) } ?: false
+                    val entity = EventEntity(
+                        id = event.id,
+                        name = event.name,
+                        summary = event.summary,
+                        description = event.description,
+                        imageLogo = event.imageLogo,
+                        mediaCover = event.mediaCover,
+                        category = event.category,
+                        ownerName = event.ownerName,
+                        cityName = event.cityName,
+                        quota = event.quota,
+                        registrants = event.registrants,
+                        beginTime = event.beginTime,
+                        endTime = event.endTime,
+                        link = event.link,
+                        isFavorite = isFavorite,
+                        isUpcoming = active == 1,
+                        isFinished = active == 0,
+                    )
+                    eventList.add(entity)
+                }
             }
+
             eventDao.insertEvents(eventList)
         } catch (e: Exception) {
             Log.e("EventRepository", "getEvents: ${e.message}")

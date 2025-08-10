@@ -63,13 +63,14 @@ interface EventDao {
     // --- Insert / Update / Delete ---
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertEvents(events: List<EventEntity>?)
+    suspend fun insertEvents(events: List<EventEntity>)
 
     @Update
     suspend fun updateEvent(event: EventEntity)
 
+    // Deletes all events that are not marked as favorites
     @Query("DELETE FROM Events_For_Dicoding WHERE isFavorite = 0")
-    suspend fun deleteAll()
+    suspend fun deleteNonFavoriteEvents()
 
     // --- Favorite State Check ---
 
